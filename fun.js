@@ -5,6 +5,7 @@ function extract(domain) {
     domain: domain
   }, (cookies) => {
     let cookie_string = cookies.map( c => `${c.name}=${c.value}` ).join('; ');
+    document.getElementById('cookie_string').value = cookie_string;
     console.log(cookie_string);
     navigator.clipboard.writeText(cookie_string);
   });
