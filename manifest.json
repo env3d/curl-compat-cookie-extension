@@ -1,11 +1,11 @@
 {
   "name": "Simple curl compatible cookies extractor",
-  "version": "1.0",
+  "version": "3.0",
   "description": "Extract cookies into a curl compatible string",
-  "permissions": [ "cookies", "http://*/*", "https://*/*" ],
+  "permissions": [ "cookies", "storage" ],
+  "host_permissions": [ "http://*/*", "https://*/*" ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "icons": {
     "16": "images/cookie-16.png",
@@ -13,8 +13,8 @@
     "128": "images/cookie-128.png"
   },
   "incognito": "split",
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
