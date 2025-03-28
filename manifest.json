@@ -2,7 +2,7 @@
   "name": "Simple curl compatible cookies extractor",
   "version": "3.0",
   "description": "Extract cookies into a curl compatible string",
-  "permissions": [ "cookies", "storage" ],
+  "permissions": [ "cookies" ],
   "host_permissions": [ "http://*/*", "https://*/*" ],
   "background": {
     "service_worker": "background.js"
